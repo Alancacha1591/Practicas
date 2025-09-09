@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -22,6 +23,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import com.example.practicas.ui.theme.PracticasTheme
 
 class MainActivity : ComponentActivity() {
@@ -44,32 +46,53 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Greeting() {
         val context= LocalContext.current
-        var texto by remember { mutableStateOf("") }
+        var ValorA by remember { mutableStateOf("") }
+        var ValorB by remember { mutableStateOf("") }
+        var Resultado by remember { mutableStateOf("") }
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ){
-            Row(){
+            Row(Modifier.padding(16.dp)){
                 OutlinedTextField(
-                    value=texto,
-                    label={Text("Nombre")},
-                    onValueChange ={texto=it}
+                    value=ValorA,
+                    label={Text("Valor A")},
+                    onValueChange ={ValorA=it}
+                )
+            }
+            Row(Modifier.padding(16.dp)){
+                OutlinedTextField(
+                    value=ValorB,
+                    label={Text("Valor B")},
+                    onValueChange ={ValorB=it}
                 )
             }
             Row(
                 Modifier.align(Alignment.CenterHorizontally)
             ){
                 OutlinedButton(onClick = { /*TODO*/
-                    Toast.makeText(
-                        context, //val context= LocalContext.current
-                        texto,
-
-                        Toast.LENGTH_LONG
-                    ).show()
+                        val a = ValorA.toInt()
+                        val b = ValorB.toInt()
+                        val c = a+b
+                        Resultado = c.toString()
                 }) {
                     Text(text = "Enviar")
                 }
+                OutlinedButton(onClick = { /*TODO*/
+                    Resultado = " "
+                }) {
+                    Text(text = "Borrar")
+                }
+            }
+            Row(
+                Modifier.align(Alignment.CenterHorizontally)
+            ){
+                OutlinedTextField(
+                    value=Resultado,
+                    label={Text("Resultado")},
+                    onValueChange ={Resultado=it}
+                )
             }
         }
     }
