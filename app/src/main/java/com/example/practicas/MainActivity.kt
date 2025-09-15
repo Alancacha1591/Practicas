@@ -98,6 +98,7 @@ fun MainScreen() {
         }
     }
 
+
     //Interfaz
     Column(
         modifier = Modifier
