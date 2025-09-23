@@ -12,9 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import androidx.navigation.Navigator
 import com.example.practicas.components.ActionButton
 import com.example.practicas.components.MainButton
 import com.example.practicas.components.Space
@@ -28,33 +26,44 @@ fun HomeView(navController: NavController){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { TitleBar("HomeView") },
+                title = { TitleBar("NFL") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                containerColor = Color.Red))
+                containerColor = Color.Black))
             },
         floatingActionButton = {
             ActionButton()
-            }
-            ){
-                ContentHomeView(navController)
-            }
-}
-        @Composable
-        fun ContentHomeView(navController : NavController){
-            val id = 1;
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ){
-                TextView("Home View")
-                Space(espacio=20)
-                MainButton(
-                    name = "Detail View",
-                    backColor = Color.Red,
-                    color = Color.White
-                ) {
-                    navController.navigate("Detail/${id}")
-                }
-            }
         }
+    ){
+        ContentHomeView(navController)
+    }
+}
+
+@Composable
+fun ContentHomeView(navController : NavController){
+    val id = 1;
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        TextView("Elige Conferencia")
+        Space(espacio=20)
+        MainButton(
+            name = "AFC View",
+            backColor = Color.Red,
+            color = Color.White
+        ) {
+            //navController.navigate("Detail/${id}")
+            navController.navigate("AFC")
+        }
+        MainButton(
+            name = "NFC View",
+            backColor = Color.Blue,
+            color = Color.White
+        ) {
+            //navController.navigate("Detail/${id}")
+            navController.navigate("NFC")
+        }
+    }
+
+}

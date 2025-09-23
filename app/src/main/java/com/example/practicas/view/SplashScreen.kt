@@ -1,6 +1,5 @@
 package com.example.practicas.view
 
-import android.window.SplashScreen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,7 +27,7 @@ fun SplashScreen(navController: NavController){
         modifier = Modifier.fillMaxSize()
     ){
         Image(
-            painter = painterResource(id= R.drawable.itl),
+            painter = painterResource(id= R.drawable.nfl),
             contentDescription = "Logo"
         )
     }
