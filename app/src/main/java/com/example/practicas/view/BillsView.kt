@@ -22,11 +22,11 @@ import com.example.practicas.components.TitleBar
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun AmericanaView(navController: NavController){
+fun BillsView(navController: NavController){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { TitleBar("AFC") },
+                title = { TitleBar("Bills") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Red))
         },
@@ -34,46 +34,25 @@ fun AmericanaView(navController: NavController){
             ActionButton()
         }
     ){
-        ContentAmericanaView(navController)
+        ContentBillsView(navController)
     }
 }
 
 @Composable
-fun ContentAmericanaView(navController : NavController){
+fun ContentBillsView(navController : NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        TextView("AFC")
+        TextView("Bills")
         Space(espacio=20)
         MainButton(
-            name = "Ravens",
-            backColor = Color.Magenta,
-            color = Color.White
-        ) {
-            navController.navigate("Ravens")
-        }
-        MainButton(
-            name = "Bills",
-            backColor = Color.Blue,
-            color = Color.White
-        ) {
-            navController.navigate("Bills")
-        }
-        MainButton(
-            name = "Texans",
+            name = "Home",
             backColor = Color.Red,
             color = Color.White
         ) {
-            navController.navigate("Texans")
-        }
-        MainButton(
-            name = "Chiefs",
-            backColor = Color.Yellow,
-            color = Color.White
-        ) {
-            navController.navigate("Chiefs")
+            navController.navigate("Home")
         }
     }
 }
