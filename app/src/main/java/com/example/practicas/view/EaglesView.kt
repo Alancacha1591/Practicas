@@ -28,7 +28,7 @@ fun EaglesView(navController: NavController){
             CenterAlignedTopAppBar(
                 title = { TitleBar("Eagles") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Red))
+                    containerColor = Color.Green))
         },
         floatingActionButton = {
             ActionButton()

@@ -28,7 +28,7 @@ fun GreenBayView(navController: NavController){
             CenterAlignedTopAppBar(
                 title = { TitleBar("Green Bay") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Red))
+                    containerColor = Color.Green))
         },
         floatingActionButton = {
             ActionButton()

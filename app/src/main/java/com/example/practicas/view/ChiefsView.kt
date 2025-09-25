@@ -28,7 +28,7 @@ fun ChiefsView(navController: NavController){
             CenterAlignedTopAppBar(
                 title = { TitleBar("Chiefs") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Red))
+                    containerColor = Color.Yellow))
         },
         floatingActionButton = {
             ActionButton()
