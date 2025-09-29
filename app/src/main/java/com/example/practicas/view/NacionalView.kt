@@ -48,11 +48,32 @@ fun ContentNacionalView(navController : NavController){
         TextView("NFC")
         Space(espacio=20)
         MainButton(
-            name = "Home",
-            backColor = Color.Blue,
+            name = "Green Bay",
+            backColor = Color.Green,
             color = Color.White
         ) {
-            navController.navigate("Home")
+            navController.navigate("GreenBay")
+        }
+        MainButton(
+            name = "Eagles",
+            backColor = Color.Green,
+            color = Color.White
+        ) {
+            navController.navigate("Eagles")
+        }
+        MainButton(
+            name = "Bucaneros",
+            backColor = Color.Red,
+            color = Color.White
+        ) {
+            navController.navigate("Bucaneros")
+        }
+        MainButton(
+            name = "49ers",
+            backColor = Color.Red,
+            color = Color.White
+        ) {
+            navController.navigate("49ers")
         }
     }
 }
