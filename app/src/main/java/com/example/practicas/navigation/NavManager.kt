@@ -2,17 +2,13 @@ package com.example.practicas.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import com.example.practicas.view.AmericanaView
 import com.example.practicas.view.BillsView
 import com.example.practicas.view.BucanerosView
 import com.example.practicas.view.ChiefsView
-import com.example.practicas.view.DetailsView
 import com.example.practicas.view.EaglesView
 import com.example.practicas.view.GreenBayView
 import com.example.practicas.view.HomeView
@@ -54,11 +50,11 @@ fun NavManager(){
         composable("49ers"){ SanFranciscoView(navController) }
 
 
-        composable("Detail/{id}", arguments =
+        /*composable("Detail/{id}", arguments =
             listOf(navArgument("id")
             {type = NavType.IntType})){
             val id:Int = it.arguments?.getInt("id")?:0
             DetailsView(navController,id)
-        }
+        }*/
     }
 }
