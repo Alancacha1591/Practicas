@@ -6,16 +6,24 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.practicas.view.AmericanaView
+import com.example.practicas.view.BillsSplash
 import com.example.practicas.view.BillsView
+import com.example.practicas.view.BucanerosSplash
 import com.example.practicas.view.BucanerosView
+import com.example.practicas.view.ChiefsSplash
 import com.example.practicas.view.ChiefsView
+import com.example.practicas.view.EaglesSplash
 import com.example.practicas.view.EaglesView
+import com.example.practicas.view.GreenBaySplash
 import com.example.practicas.view.GreenBayView
 import com.example.practicas.view.HomeView
 import com.example.practicas.view.NacionalView
+import com.example.practicas.view.RavensSplash
 import com.example.practicas.view.RavensView
+import com.example.practicas.view.SanFranciscoSplash
 import com.example.practicas.view.SanFranciscoView
 import com.example.practicas.view.SplashScreen
+import com.example.practicas.view.TexansSplash
 import com.example.practicas.view.TexansView
 
 @Composable
@@ -32,21 +40,29 @@ fun NavManager(){
         composable("NFC"){ NacionalView(navController) }
         //----------------------------------------------------------------------------------------------
         //AFC Norte - Ravens
+        composable("RavensSplash"){ RavensSplash(navController) }
         composable("Ravens"){ RavensView(navController) }
         //AFC Este - Bills
+        composable("BillsSplash"){ BillsSplash(navController) }
         composable("Bills"){ BillsView(navController) }
         //AFC Sur - Texans
+        composable("TexansSplash"){ TexansSplash(navController) }
         composable("Texans"){ TexansView(navController) }
         //AFC Oeste - Chiefs
+        composable("ChiefsSplash"){ ChiefsSplash(navController) }
         composable("Chiefs"){ ChiefsView(navController) }
         //----------------------------------------------------------------------------------------------
         //NFC Norte - Green Bay
+        composable("GreenBaySplash"){ GreenBaySplash(navController) }
         composable("GreenBay"){ GreenBayView(navController) }
         //NFC Este - Eagles
+        composable("EaglesSplash"){ EaglesSplash(navController) }
         composable("Eagles"){ EaglesView(navController) }
         //NFC Sur - Bucaneros
+        composable("BucanerosSplash"){ BucanerosSplash(navController) }
         composable("Bucaneros"){ BucanerosView(navController) }
         //NFC Oeste - 49ers
+        composable("49ersSplash"){ SanFranciscoSplash(navController) }
         composable("49ers"){ SanFranciscoView(navController) }
 
 

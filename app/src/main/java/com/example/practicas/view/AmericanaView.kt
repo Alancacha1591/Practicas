@@ -35,7 +35,7 @@ fun AmericanaView(navController: NavController){
                 navigationIcon = {
                     MainIconButton(
                         icon = Icons.Filled.ArrowBack, // Icono de flecha
-                        onClick = { navController.popBackStack() } // Vuelve a HomeView
+                        onClick = { navController.navigate("Home") } // Vuelve a HomeView
                     )
                 },
                 title = {
@@ -79,7 +79,7 @@ fun ContentAmericanaView(navController: NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- CAMBIO CLAVE: Ocupa 1/4 del espacio
-                route = "Ravens",
+                route = "RavensSplash",
                 backColor = Color(0xFF23176C),
                 logoId = R.drawable.ravens,
                 division = "AFC NORTH",
@@ -90,7 +90,7 @@ fun ContentAmericanaView(navController: NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- Ocupa 1/4 del espacio
-                route = "Bills",
+                route = "BillsSplash",
                 backColor = Color(0xFF025496),
                 logoId = R.drawable.bills,
                 division = "AFC EAST",
@@ -101,7 +101,7 @@ fun ContentAmericanaView(navController: NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- Ocupa 1/4 del espacio
-                route = "Texans",
+                route = "TexansSplash",
                 backColor = Color(0xFF031F2F),
                 logoId = R.drawable.texans,
                 division = "AFC SOUTH",
@@ -112,7 +112,7 @@ fun ContentAmericanaView(navController: NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- Ocupa 1/4 del espacio
-                route = "Chiefs",
+                route = "ChiefsSplash",
                 backColor = Color(0xFFD2122C),
                 logoId = R.drawable.chiefs,
                 division = "AFC WEST",

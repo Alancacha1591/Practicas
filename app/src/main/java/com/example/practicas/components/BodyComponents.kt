@@ -27,7 +27,7 @@ import androidx.navigation.NavController
 @Composable
 fun TextView(texto:String){
     Text(text = texto,
-        fontSize = 40.sp,
+        fontSize = 30.sp,
         fontWeight = FontWeight.Bold,
         color = Color.Black,)
 }

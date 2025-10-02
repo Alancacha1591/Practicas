@@ -35,7 +35,7 @@ fun NacionalView(navController: NavController){
                 navigationIcon = {
                     MainIconButton(
                         icon = Icons.Filled.ArrowBack, // Icono de flecha
-                        onClick = { navController.popBackStack() } // Vuelve a HomeView
+                        onClick = { navController.navigate("Home") } // Vuelve a HomeView
                     )
                 },
                 title = {
@@ -79,7 +79,7 @@ fun ContentNacionalView(navController : NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- CAMBIO CLAVE: Ocupa 1/4 del espacio
-                route = "GreenBay",
+                route = "GreenBaySplash",
                 backColor = Color(0xFF004330),
                 logoId = R.drawable.greenbay,
                 division = "NFC NORTH",
@@ -90,7 +90,7 @@ fun ContentNacionalView(navController : NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- Ocupa 1/4 del espacio
-                route = "Eagles",
+                route = "EaglesSplash",
                 backColor = Color(0xFF014C54),
                 logoId = R.drawable.eagles,
                 division = "NFC EAST",
@@ -101,7 +101,7 @@ fun ContentNacionalView(navController : NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- Ocupa 1/4 del espacio
-                route = "Bucaneros",
+                route = "BucanerosSplash",
                 backColor = Color(0xFFB22236),
                 logoId = R.drawable.bucaneros,
                 division = "NFC SOUTH",
@@ -112,7 +112,7 @@ fun ContentNacionalView(navController : NavController, paddingValues: PaddingVal
             TeamCard(
                 navController = navController,
                 modifier = Modifier.weight(1f), // <--- Ocupa 1/4 del espacio
-                route = "49ers",
+                route = "49ersSplash",
                 backColor = Color(0xFFA8956B),
                 logoId = R.drawable.sanfrancisco,
                 division = "NFC WEST",

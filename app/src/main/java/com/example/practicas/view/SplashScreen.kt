@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import com.example.practicas.R
@@ -27,8 +28,11 @@ fun SplashScreen(navController: NavController){
         modifier = Modifier.fillMaxSize()
     ){
         Image(
-            painter = painterResource(id= R.drawable.nfl),
-            contentDescription = "Logo"
+            painter = painterResource(id= R.drawable.intro), // Tu imagen actual
+            contentDescription = "Logo",
+            // <--- MODIFICACIÓN CLAVE ABAJO
+            modifier = Modifier.fillMaxSize(), // Asegura que el componente Image cubra el Box
+            contentScale = ContentScale.Crop // <--- ESTO FUERZA A LA IMAGEN A LLENAR TODA EL ÁREA
         )
     }
 }
