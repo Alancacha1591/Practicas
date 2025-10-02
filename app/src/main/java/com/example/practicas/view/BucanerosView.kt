@@ -173,7 +173,7 @@ fun ChampionshipsBucaneros() {
     ) {
         // Títulos Divisionales
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Image(painter = painterResource(id = R.drawable.achamp), contentDescription = "Títulos", modifier = Modifier.height(120.dp))
+            Image(painter = painterResource(id = R.drawable.nchamp), contentDescription = "Títulos", modifier = Modifier.height(120.dp))
             Text(text = "2 Títulos", fontWeight = FontWeight.Bold)
             Text(text = "(2002, 2020)", fontSize = 15.sp)
         }

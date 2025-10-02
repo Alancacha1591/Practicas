@@ -172,7 +172,7 @@ fun ChampionshipsGreenBay() {
     ) {
         // Títulos Divisionales
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Image(painter = painterResource(id = R.drawable.achamp), contentDescription = "Títulos", modifier = Modifier.height(120.dp))
+            Image(painter = painterResource(id = R.drawable.nchamp), contentDescription = "Títulos", modifier = Modifier.height(120.dp))
             Text(text = "9 Títulos", fontWeight = FontWeight.Bold)
             Text(text = "(1960, 1961, 1962)", fontSize = 15.sp)
             Text(text = "(1965, 1966)", fontSize = 15.sp)

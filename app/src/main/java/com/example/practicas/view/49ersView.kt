@@ -172,7 +172,7 @@ fun ChampionshipsSanFrancisco() {
     ) {
         // Títulos Divisionales
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Image(painter = painterResource(id = R.drawable.achamp), contentDescription = "Títulos", modifier = Modifier.height(120.dp))
+            Image(painter = painterResource(id = R.drawable.nchamp), contentDescription = "Títulos", modifier = Modifier.height(120.dp))
             Text(text = "8 Títulos", fontWeight = FontWeight.Bold)
             Text(text = "(1981, 1984, 1988, 1989)", fontSize = 15.sp)
             Text(text = "(1994, 2012, 2019, 2023)", fontSize = 15.sp)
